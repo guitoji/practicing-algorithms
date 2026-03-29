@@ -4,15 +4,14 @@ void main() {
 
     Scanner scanner =  new Scanner(System.in);
 
-    System.out.print("Digite o tamanho da lista: ");
+    System.out.print("Digite o tamanho da arr: ");
     int size = scanner.nextInt();
 
     int[] arr = new int[size];
     for (int i = 0; i < size; i++) {
-        System.out.printf("Digite o numero na posicao %d: ", i);
+        System.out.printf("Digite o %d numero: ", (i + 1));
         arr[i] = scanner.nextInt();
     }
-    Arrays.sort(arr); //Busca binária sempre deve receber uma estrutura de dados ordenada!.
 
     System.out.print("\nDigite o numero que deseja procurar: ");
     int item = scanner.nextInt(); //declarando item procurado
@@ -24,6 +23,8 @@ void main() {
 }
 
 public static Integer binarySearch(int[] arr, int item) {
+    Arrays.sort(arr); //Busca binária sempre deve receber uma estrutura de dados ordenada!
+
     int baixo = 0; //declarando inicio do arr
     int alto = arr.length - 1; //declarando final do arr
 
